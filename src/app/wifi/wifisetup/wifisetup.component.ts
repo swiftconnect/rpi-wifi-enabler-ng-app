@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import {HttpClientModule, HttpClient, HttpRequest, HttpResponse, HttpEventType} from '@angular/common/http';
 @Component({
   selector: 'app-wifisetup',
@@ -12,7 +13,7 @@ export class WifisetupComponent implements OnInit {
   public url ;
   public port;
   public protocol;
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,private snackbar: MatSnackBar) {
     this.ip = window.location.hostname;
     this.port = window.location.port;
     console.log(this.port);
@@ -29,6 +30,10 @@ export class WifisetupComponent implements OnInit {
     console.log(form.value);
     this.http.post(this.url, {params:{username: form.value.name, password: form.value.password}}).subscribe(res => {
       console.log(res);
+      this.snackbar.open('','Applying settings ',{
+        duration: 3000,
+        verticalPosition: 'top'
+      })
     });
   }
 }
