@@ -1,0 +1,113 @@
+<!--<div   style="margin-bottom:5px;
+top: 0;
+ position: sticky;
+ z-index: 1;
+ background-color: inherit;"><mat-toolbar>
+<span>Dashboard</span>
+</mat-toolbar>
+</div>-->
+
+<mat-toolbar  class="mat-elevation-z6">
+  <button mat-icon-button (click)="opened = !opened">
+    <mat-icon>menu</mat-icon>
+    </button>
+    <img style="width:35px;margin-left:15px;cursor:pointer;" src="https://swiftsense.biz/wp-content/uploads/2018/11/cropped-cropped-SGGlogo.png">
+    <!--<mat-menu #menu="matMenu">
+  <button mat-menu-item routerLink="/login" routerLinkActive="active"><mat-icon>settings_power</mat-icon>Log out</button>
+</mat-menu>-->
+    <!--<span class="example-spacer"></span>
+    <div class="row"><div class="col-12">
+    <span style="color:white;font-size:15px;">{{date}}</span><br/>
+    <span style="color:white;font-size:15px;"> {{today | date: 'dd/MM/yyyy'}}</span></div></div>
+    <span style="color:lightgray;margin-left:15px;margin-top:5px;" *ngIf="apiclientSvc.loggedIn" [matMenuTriggerFor]="appMenu"><mat-icon style="font-size:40px;cursor:pointer;">account_circle</mat-icon></span>
+<mat-menu #appMenu="matMenu">-->
+  <!--<button mat-menu-item style="background-color:black;color:lightgray;">admin@eldercare.com</button><br/>
+  <button mat-menu-item style="background-color:black;color:lightgray;" (click)="logout()"><mat-icon>settings_power</mat-icon>Log out</button>-->
+  <!--<cdk-virtual-scroll-viewport class="example-viewport" itemSize="0">
+                    <mat-list role="list">
+                      <mat-list-item role="listitem">
+                      <button mat-button style="background-color:#151a30;color:white;font-weight:bold;width:170px;" (click)="logout()"><mat-icon>account_circle</mat-icon><span style="margin-left:5px;">{{apiclientSvc.getUserId}}</span></button>
+                      </mat-list-item>
+                      <mat-list-item role="listitem">
+                      <button mat-button style="background-color:#151a30;color:white;font-weight:bold;width:170px;" (click)="logout()"><mat-icon>settings_power</mat-icon><span style="margin-left:5px;">Log out</span></button>
+                      </mat-list-item>
+                    </mat-list>
+                  </cdk-virtual-scroll-viewport>
+</mat-menu>-->
+</mat-toolbar>
+<mat-sidenav-container style="background-color: #212529;" class="main-sidenav-container" (backdropClick)="opened = !opened">
+<mat-sidenav [mode]="mode"
+            [opened]="opened"
+            [fixedInViewport]="true"
+            [fixedTopGap]="layoutGap">
+            <!--<button mat-button (click)="opened = !opened">
+              Hello from Sidenav-Content
+            </button>-->
+            <mat-list>
+            <mat-nav-list>
+              <!--<a mat-list-item routerLink="zigbee" routerLinkActive="active"><mat-icon mat-list-icon>important_devices</mat-icon><div mat-line>Zigbee Device Manager</div></a>
+              <a mat-list-item routerLink="bluetooth" routerLinkActive="active" mat-list-item><mat-icon mat-list-icon >bluetooth_audio</mat-icon><div mat-line>Bluetooth</div></a>-->
+              <a mat-list-item routerLink="wifi" routerLinkActive="active" mat-list-item><mat-icon mat-list-icon >wifi</mat-icon><div mat-line>WiFi</div></a>
+              <!--<a mat-list-item mat-list-item (click)="logout()" href="#" *ngIf="apiclientSvc.loggedIn"><mat-icon mat-list-icon >settings_power</mat-icon><div mat-line>Logout</div></a>
+              <a mat-list-item routerLink="" routerLinkActive="active"><mat-icon mat-list-icon>important_devices</mat-icon><div mat-line>Room Status</div></a>-->
+            </mat-nav-list>
+            </mat-list>
+  </mat-sidenav>
+  <!--<div>scroll below</div>
+  <div class="div-scrollable"></div>
+  <div>some more content</div>-->
+  <main style="background-color: #212529;flex:1;" ><router-outlet></router-outlet></main>
+  <!--<footer style="text-align:center;color:white;position: absolute;
+ bottom: 0;
+ width: 100%;">
+     @  version: 1.0
+    </footer>-->
+  <div class="foot"><p><a href="http://swiftsense.biz/">Swiftsense </a> | v1.0.1 | <a href="http://swiftsense.biz/">JavaScript Licenses </a></p></div>
+</mat-sidenav-container>
+
+
+<!--<mat-sidenav-container style="background-color:whitesmoke;">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+
+    <mat-toolbar>
+    <img style="width:40px;height:40px;cursor:pointer;padding:5px;" routerLink="/" routerLinkActive="active" src="https://swiftsense.biz/wp-content/uploads/2018/11/cropped-cropped-SGGlogo.png"
+            alt="SwiftSense Logo" /><h1 style="margin-left:10px;"> Swiftsense</h1>
+            <button style="margin-left:30px;"
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">close</mat-icon>
+      </button>
+            </mat-toolbar>
+            <mat-divider></mat-divider>
+    <mat-nav-list>
+      <a mat-list-item routerLink="zigbee" routerLinkActive="active" mat-list-item><mat-icon>important_devices</mat-icon>Zigbee Manager</a>
+      <a mat-list-item routerLink="bluetooth" routerLinkActive="active"><mat-icon>bluetooth_audio</mat-icon>Bluetooth</a>
+     </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar style="background-color:#36454F" >
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>DEVICE MANAGER</span>
+      <span class="example-spacer"></span>
+
+    </mat-toolbar>
+-->
+    <!-- Add Content Here-->
+   <!-- <router-outlet></router-outlet>-->
+
+    <!--<div class="foot"><p>@ 2020 Swiftsense Pvt Ltd. All rights are reserved. </p></div>-->
+ <!-- </mat-sidenav-content>
+</mat-sidenav-container>-->

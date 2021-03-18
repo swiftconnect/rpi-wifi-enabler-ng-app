@@ -1,0 +1,35 @@
+<mat-toolbar>
+<mat-icon style="cursor:pointer;color:lightgray;" routerLink="/zigbee" routerLinkActive="active">arrow_back_ios</mat-icon>
+<h1 style="margin-left:30px;color:lightgray;">ZIGBEE FULL RESET</h1>
+</mat-toolbar>
+<br/>
+<div style="display:flex;margin-left:10px;">
+<h5 style="color:red;">*Note:</h5><p style="margin-left:10px;color:white;">If you reset, then whole zigbee devices will be reset state .</p>
+</div>
+<br/>
+<div class="card" style="width: 20rem;margin:0 auto;background-color:#383f45;color:white;">
+  <div class="card-body">
+    <h5 class="card-title">
+          <mat-form-field style="width:280px;">
+          <mat-label style="color:lightgray;">Do you want full reset ? </mat-label>
+          <mat-select [(value)]="selected">
+          <mat-option value="true">Yes</mat-option>
+          <!--<mat-option value="false">No</mat-option>-->
+          </mat-select>
+          </mat-form-field>
+    </h5>
+    <button mat-raised-button color="primary" type="submit" class="mt-4" (click)="reset(selected)">RESET</button>
+  </div>
+</div>
+
+
+<!--  <mat-form-field appearance="fill" style="width:250px;position: fixed;z-index: 1031;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+  <mat-label>Do you want to do full reset  ? </mat-label>
+  <mat-select [(value)]="selected">
+    <mat-option value="true">Yes</mat-option>
+    <mat-option value="false">No</mat-option>
+  </mat-select><br/>
+    <button mat-raised-button color="primary" style="top: 50%;left: 50%;transform: translate(-50%, 10%);" type="submit" class="mt-4" (click)="reset(selected)">RESET</button>
+</mat-form-field>-->
+
+

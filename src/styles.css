@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+/*body {
+    background-image: url('https://cached.imagescaler.hbpl.co.uk/resize/scaleWidth/880/cached.offlinehbpl.hbpl.co.uk/news/TIC/singapore-20160217101821172.gif');
+    background-size: cover;
+}*/
+
+body {
+    background-color: whitesmoke;
+}

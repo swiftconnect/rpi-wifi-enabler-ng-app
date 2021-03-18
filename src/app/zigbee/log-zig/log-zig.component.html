@@ -1,0 +1,14 @@
+<mat-toolbar><mat-icon style="cursor:pointer;color:lightgray;" routerLink="/zigbee" routerLinkActive="active">arrow_back_ios</mat-icon><h1 style="margin-left:30px;color:lightgray;">Zigbee Logs</h1></mat-toolbar>
+
+<div class="embed-responsive embed-responsive-21by9">
+  <iframe class="embed-responsive-item" [src]="urlSafe" allowfullscreen></iframe>
+</div>
+
+<!--<div class="spinner-grow text-warning" style="position: fixed;z-index: 1031;top: 50%;left: 50%;transform: translate(-50%, -50%);" role="status" *ngIf="loading else loaded">
+  <span class="sr-only">Loading...</span>
+</div>
+
+<ng-template #loaded>
+<p>{{newzigData}}</p>
+</ng-template>-->
+

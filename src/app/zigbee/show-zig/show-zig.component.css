@@ -1,0 +1,40 @@
+mat-toolbar {
+    background-color: #383f45;
+    color: lightgray;
+}
+
+.btn {
+    background-color: #383f45;
+    color: lightgoldenrodyellow;
+}
+
+mat-card-actions button {
+    background-color: #383f45;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+mat-card-actions button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+mat-card-subtitle {
+    color: white;
+}
+
+.device-card {
+    width: 320px;
+    margin-top: 0px;
+    border-radius: 10px;
+    background-color: #383f45;
+    color: whitesmoke;
+}
+
+.device-header-image {
+    background-image: url('https://swiftsense.biz/wp-content/uploads/2018/11/cropped-cropped-SGGlogo.png');
+    background-size: cover;
+    cursor: pointer;
+}

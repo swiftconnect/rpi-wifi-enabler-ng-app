@@ -1,0 +1,30 @@
+<div class="d-flex justify-content-between m-3">
+  <h4>Favourites</h4>
+
+  <button mat-button (click)="onClose()">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+<div style="width: 500px; height: 250px;">
+<mat-grid-list [cols]="breakpoint" rowHeight="250px" gutterSize="20px" (window:resize)="onResize($event)">
+  <mat-grid-tile>
+<mat-card class="example-card">
+     <mat-card-header>
+     <div mat-card-avatar class="example-header-image"></div>
+     <mat-card-title>{{data.localName}}</mat-card-title><br />
+     <mat-card-title>HUMAN_TEMP</mat-card-title><br />
+    <mat-card-subtitle style="color:white;">{{data.address}}</mat-card-subtitle>
+  </mat-card-header>
+      <mat-card-content>
+  <mat-icon>bluetooth_audio</mat-icon><br />
+  </mat-card-content>
+
+  <mat-card-actions>
+      <button mat-button><mat-icon style="color:red;">favorite</mat-icon>
+      </button>
+      <button style="background-color: grey;color:white;" mat-button>Remove</button>
+  </mat-card-actions>
+</mat-card>
+</mat-grid-tile>
+</mat-grid-list>
+</div>

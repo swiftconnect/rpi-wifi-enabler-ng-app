@@ -1,0 +1,204 @@
+/*.sidenav-container {
+    height: 100%;
+    max-width: 100%;
+    background-color: whitesmoke;
+}
+
+.pos {
+    max-width: 200px;
+    max-height: 100%;
+}
+
+.pos1 {
+    max-width: 100%;
+    max-height: 100px;
+}
+
+.sidenav {
+    width: 250px;
+    background-color: #36454F;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.sidenav .mat-toolbar {
+    bakground: inherit;
+    background-color: #0dba86;
+}
+
+.title {
+    align-items: center;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.device-header-image {
+    background-image: url('https://swiftsense.biz/wp-content/uploads/2018/11/cropped-cropped-SGGlogo.png');
+    background-size: cover;
+}
+*/
+
+
+/*.status {
+margin-top: 150px;
+height: 47%;
+}*/
+
+
+/*at-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+mat-toolbar {
+    font-family: Verdana, Geneva, sans-serif;
+    color: white;
+}
+
+.foot {
+    padding: 20px;
+    color: black;
+    text-align: center;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.navi {
+    margin-left: 930px;
+    display: flex;
+    cursor: pointer;
+}
+
+mat-icon {
+    width: 40px;
+}
+
+mat-grid-tile-header {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.example-viewport {
+    height: 200px;
+    width: 250px;
+    boder: 1px solid black;
+}
+
+mat-list-item:hover {
+    background-color: lightgreen;
+    color: black;
+}
+
+.image {
+    text-align: center;
+}
+
+.image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 15px 45px;
+    background-size: cover;
+}
+
+mat-nav-list a {
+    background-color: #36454F;
+    color: white;
+}*/
+
+mat-toolbar {
+    background-color: #212529;
+    color: lightgray;
+    font-family: Roboto, sans-serif;
+    position: relative;
+    z-index: 0;
+    display: flex;
+}
+
+mat-sidenav {
+    background-color: #407EF1 !important;
+    color: white;
+}
+
+mat-sidenav mat-nav-list a {
+    color: whitesmoke;
+}
+
+mat-sidenav mat-nav-list a:hover {
+    background-color: #6694EC;
+    color: whitesmoke;
+}
+
+@media (max-width: 422px) {
+    mat-toolbar {
+        padding: 35px 24px;
+        font-size: 15px;
+    }
+}
+
+.example-spacer {
+    flex: 1 auto;
+}
+
+.div-scrollable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #212b31;
+    height: 4000px;
+}
+
+@media screen and (min-width: 960px) {
+    mat-toolbar {
+        z-index: 50;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    mat-toolbar {
+        z-index: 0;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .main-sidenav-container {
+        width: 100%;
+        height: calc(100vh - 56px);
+        z-index: 100;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .main-sidenav-container {
+        width: 100%;
+        height: calc(100vh - 64px);
+    }
+}
+
+.example-viewport {
+    height: 120px;
+    width: 210px;
+    border: 1px solid white;
+    background-color: #090b15;
+    color: lightgray;
+    align-content: center;
+    font-weight: bold;
+}
+
+.example-viewport mat-list-item button:hover {
+    background-color: #465966;
+    color: lightgray;
+}
+
+mat-menu {
+    background-color: #465966;
+}
+
+.foot {
+    padding: 20px;
+    color: lightgray;
+    text-align: center;
+    font-size: 15px;
+    font-family: Roboto, sans-serif;
+}

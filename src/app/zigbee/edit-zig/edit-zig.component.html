@@ -1,0 +1,33 @@
+<div class="d-flex justify-content-between m-3">
+  <h4>Edit Friendly Name</h4>
+
+  <button mat-button (click)="onClose()">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+
+<div style="width: 500px; height: 200px;">
+<form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+
+  <div class="m-3 input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text"> Current Friendly Name </span>
+    </div>
+    <input readonly="readonly" type="text" class="form-control" name="friendly_name" #friendly_name="ngModel" [(ngModel)]="this.data.friendly_name">
+  </div>
+
+  <div class="m-3 input-group">
+    <div class="input-group-prepend">
+      <span class="input-group-text"> Type new Friendly Name </span>
+    </div>
+    <input required minlength="1" type="text" class="form-control" name="friendlyname" #friendlyname="ngModel" [(ngModel)]="data.friendlyname">
+  </div>
+  <div class="text-left text-danger"
+  *ngIf="friendlyname.invalid && friendlyname.touched">
+  Please enter friendly name
+  </div>
+
+
+  <button mat-raised-button color="primary" type="submit" class="mt-4" [disabled]="form.invalid">UPDATE</button>
+</form>
+</div>

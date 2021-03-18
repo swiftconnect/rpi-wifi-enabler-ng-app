@@ -1,0 +1,44 @@
+mat-card-actions button {
+    background-color: #383f45;
+    color: orange;
+}
+
+mat-grid-tile {
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.example-header-image {
+    background-image: url('https://rukminim1.flixcart.com/image/352/352/jfyaf0w0/smartwatch/h/t/q/a1-smartwatch-black-76e-ewell-original-imaf4yv38fefhmcx.jpeg?q=70');
+    background-size: cover;
+    cursor: pointer;
+}
+
+.example-card {
+    hight: 100%;
+    width: 280px;
+    background-color: #383f45;
+    color: white;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+mat-toolbar {
+    background-color: #383f45;
+    color: lightgray;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.btn {
+    background-color: #383f45;
+    color: lightgray;
+    float: right;
+}
+
+mat-card-content {
+    font-size: 15px;
+}
+
+mat-card-content mat-icon {
+    font-size: 50px;
+    padding: 10px 80px;
+}
