@@ -28,7 +28,7 @@ export class WifisetupComponent implements OnInit {
 
   onSubmit(form: NgForm){
     console.log(form.value);
-    this.http.post(this.url, {params:{username: form.value.name, password: form.value.password}}).subscribe(res => {
+    this.http.post(this.url, {}, {params:{username: form.value.name, password: form.value.password}}).subscribe(res => {
       console.log(res);
       this.snackbar.open('','Applying settings ',{
         duration: 3000,
