@@ -11,13 +11,15 @@ export class WifisetupComponent implements OnInit {
   public ip;
   public url ;
   public port;
+  public protocol;
   constructor(private http: HttpClient) {
     this.ip = window.location.hostname;
     this.port = window.location.port;
     console.log(this.port);
     console.log(this.ip);
+    this.protocol = window.location.protocol;
     // this.url = 'http://8344357067f7.ngrok.io/api/';
-    this.url = 'http://' + this.ip + ':' + this.port + '/api/v1/wifi-params';
+    this.url = this.protocol+ '//' + this.ip + ':' + this.port + '/api/v1/init-wifi';
   }
 
   ngOnInit(): void {
@@ -25,7 +27,7 @@ export class WifisetupComponent implements OnInit {
 
   onSubmit(form: NgForm){
     console.log(form.value);
-    this.http.post(this.url, form.value.name, form.value.password).subscribe(res => {
+    this.http.post(this.url, {params:{username: form.value.name, password: form.value.password}}).subscribe(res => {
       console.log(res);
     });
   }
