@@ -18,6 +18,7 @@ const routes: Routes = [
   {path: 'permit', component: PermitZigComponent},
   {path: 'reset', component: ResetZigComponent},
   {path: 'wifi', component: WifisetupComponent},
+  { path: '', pathMatch: 'full', redirectTo: '/wifi' }
 ];
 
 @NgModule({

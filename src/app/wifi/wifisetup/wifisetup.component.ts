@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import {HttpClientModule, HttpClient, HttpRequest, HttpResponse, HttpEventType} from '@angular/common/http';
 @Component({
   selector: 'app-wifisetup',
@@ -13,7 +14,7 @@ export class WifisetupComponent implements OnInit {
   public url ;
   public port;
   public protocol;
-  constructor(private http: HttpClient,private snackbar: MatSnackBar) {
+  constructor(private http: HttpClient,private snackbar: MatSnackBar,private router: Router) {
     this.ip = window.location.hostname;
     this.port = window.location.port;
     console.log(this.port);
@@ -34,10 +35,15 @@ export class WifisetupComponent implements OnInit {
     })
     this.http.post(this.url, {username: form.value.name, password: form.value.password}, {params:{username: form.value.name, password: form.value.password}}).subscribe(res => {
       console.log(res);
-      this.snackbar.open('','Applied settings ',{
+      this.snackbar.open('','Applied settings and status response OK ',{
         duration: 3000,
         verticalPosition: 'top'
       })
+    },(error) => {
+      console.log({ERROR: error.status});
+      if(error.status !== 200){
+        this.router.navigate(['/fav']);
+      }
     });
   }
 }
