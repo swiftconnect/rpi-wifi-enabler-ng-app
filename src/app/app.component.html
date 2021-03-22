@@ -8,10 +8,11 @@ top: 0;
 </div>-->
 
 <mat-toolbar  class="mat-elevation-z6">
-  <button mat-icon-button (click)="opened = !opened">
+  <!--<button mat-icon-button (click)="opened = !opened">
     <mat-icon>menu</mat-icon>
-    </button>
-    <img style="width:35px;margin-left:15px;cursor:pointer;" src="https://swiftsense.biz/wp-content/uploads/2018/11/cropped-cropped-SGGlogo.png">
+    </button>-->
+    <img style="width:55px;border-radius:50%;margin-left:15px;cursor:pointer;" src="../assets/logo.png">
+    <h4 style="font-weight:bolder;padding:20px;">WIFI-SETUP-PORTAL</h4> <br />
     <!--<mat-menu #menu="matMenu">
   <button mat-menu-item routerLink="/login" routerLinkActive="active"><mat-icon>settings_power</mat-icon>Log out</button>
 </mat-menu>-->
@@ -36,27 +37,27 @@ top: 0;
 </mat-menu>-->
 </mat-toolbar>
 <mat-sidenav-container style="background-color: #212529;" class="main-sidenav-container" (backdropClick)="opened = !opened">
-<mat-sidenav [mode]="mode"
+<!--<mat-sidenav [mode]="mode"
             [opened]="opened"
             [fixedInViewport]="true"
-            [fixedTopGap]="layoutGap">
+            [fixedTopGap]="layoutGap">-->
             <!--<button mat-button (click)="opened = !opened">
               Hello from Sidenav-Content
-            </button>-->
+            </button>
             <mat-list>
-            <mat-nav-list>
+            <mat-nav-list>-->
               <!--<a mat-list-item routerLink="zigbee" routerLinkActive="active"><mat-icon mat-list-icon>important_devices</mat-icon><div mat-line>Zigbee Device Manager</div></a>
               <a mat-list-item routerLink="bluetooth" routerLinkActive="active" mat-list-item><mat-icon mat-list-icon >bluetooth_audio</mat-icon><div mat-line>Bluetooth</div></a>-->
-              <a mat-list-item routerLink="wifi" routerLinkActive="active" mat-list-item><mat-icon mat-list-icon >wifi</mat-icon><div mat-line>WiFi</div></a>
+              <!--<a mat-list-item routerLink="wifi" routerLinkActive="active" mat-list-item><mat-icon mat-list-icon >wifi</mat-icon><div mat-line>WiFi</div></a>-->
               <!--<a mat-list-item mat-list-item (click)="logout()" href="#" *ngIf="apiclientSvc.loggedIn"><mat-icon mat-list-icon >settings_power</mat-icon><div mat-line>Logout</div></a>
               <a mat-list-item routerLink="" routerLinkActive="active"><mat-icon mat-list-icon>important_devices</mat-icon><div mat-line>Room Status</div></a>-->
-            </mat-nav-list>
+            <!--</mat-nav-list>
             </mat-list>
-  </mat-sidenav>
+  </mat-sidenav>-->
   <!--<div>scroll below</div>
   <div class="div-scrollable"></div>
   <div>some more content</div>-->
-  <main style="background-color: #212529;flex:1;" ><router-outlet></router-outlet></main>
+  <main style="background-color: #212529;" ><app-wifisetup></app-wifisetup></main>
   <!--<footer style="text-align:center;color:white;position: absolute;
  bottom: 0;
  width: 100%;">
